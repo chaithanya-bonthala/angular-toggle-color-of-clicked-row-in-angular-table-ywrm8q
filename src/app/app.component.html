@@ -1,0 +1,14 @@
+<table border="1">
+  <thead>
+    <td>Name</td>
+    <td>Surname</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ApiDataFile of filteredApiDataFiles; let idx=index; let even=even"
+    [style.background-color]="rowClicked == idx ? 'yellow' : (even ? 'red' : 'green')"
+    (click)="changeTableRowColor(idx)">
+      <td>{{ ApiDataFile.name }}</td>
+      <td>{{ ApiDataFile.surname }}</td>
+    </tr>
+  </tbody>
+</table>
